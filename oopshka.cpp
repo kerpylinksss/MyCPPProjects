@@ -9,6 +9,7 @@ class Critter {
         void Talk();
         void Eat(int food = 4);
         void Play(int fun = 4);
+        void feelsNow();
     private:
         int mHunger;
         int mBoredom;
@@ -66,6 +67,11 @@ void Critter::Play(int fun){
     PassTime();
 }
 
+void Critter::feelsNow(){
+    cout << "My hunger is: " << mHunger << endl;
+    cout << "My boredom is: " << mBoredom << endl;
+}
+
 int main(){
     Critter crit;
     crit.Talk();
@@ -92,7 +98,7 @@ int main(){
                 crit.Play();
                 break;
             default:
-                cout << "\nSorry, but it's not a valid choice!\n\n";
+                crit.feelsNow();
         }  
     }while(choice != 0);
     
