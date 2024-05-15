@@ -33,7 +33,7 @@ int main(){
 
     Peek(crit);
     cout << "\nSending crit object to cout with the << operator: \n";
-    cout << crit;
+    cout << crit << endl;
     return 0;
 }
 
@@ -44,7 +44,7 @@ void Peek(const Critter& aCritter){
 ostream& operator << (ostream& os, const Critter& aCritter){
 
     os << "Critter object - ";
-    os << "mName: " << aCritter.mName;
+    os << "mName: " << aCritter.mName << "\n";
     return os;
 
 }
